@@ -1,0 +1,59 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="result">
+    <view class="title">电流值 /A</view>
+    <view class="score">{{score}}</view>
+   
+    
+  </view>
+  <view class="input-container">
+    <view class="item">
+      <text class="label">电压</text>
+      <text class="unit">V</text>
+      <input type="digit" bindinput="bindKeyvoltageInput" maxlength="6" class="" />
+    </view>
+    <view class="item">
+      <text class="label">R1阻值</text>
+      <text class="unit">Ω</text>
+      <input type="digit" bindinput="bindKeyr1Input" maxlength="9" class="" />
+    </view>
+    <view class="item">
+      <text class="label">R2阻值</text>
+      <text class="unit">Ω</text>
+      <input type="digit" bindinput="bindKeyr2Input" maxlength="9" class="" />
+    </view>
+    <view class="item">
+      <text class="label">R3阻值</text>
+      <text class="unit">Ω</text>
+      <input type="digit" bindinput="bindKeyr3Input" maxlength="9" class="" />
+    </view>
+    <view class="item">
+      <text class="label">R4阻值</text>
+      <text class="unit">Ω</text>
+      <input type="digit" bindinput="bindKeyr4Input" maxlength="9" class="" />
+    </view>
+
+    <view class="item no-border">
+      <text class="label">选择电路</text>
+      <picker mode="selector" value="{{index}}" range="{{array}}" bindchange="bindPickerChange" class="type_select">
+        <view class="picker">
+          {{array[index]}}
+          <text>></text>
+        </view>
+      </picker>
+    </view>
+    <button class="calcu_btn" bindtap="calculateBtn">计算</button>
+  </view>
+
+  <view class="table" hidden="{{index!= 0}}">
+    <text class="table-title">电路图1</text>
+     <image src="https://github.com/Bluepepsis/image/blob/master/circuit1.png" width="50%" height="80" >  
+     </image> 
+  </view>
+  <view class="table" hidden="{{index!= 1}}">
+    <text class="table-title">电路图1</text>
+     <image src="https://github.com/Bluepepsis/image/blob/master/circuit2.png" width="50%" height="80" >  
+     </image> 
+  </view>
+</view>
