@@ -48,12 +48,12 @@
 
   <view class="table" hidden="{{index!= 0}}">
     <text class="table-title">电路图1</text>
-     <image src="https://github.com/Bluepepsis/image/blob/master/circuit1.png" width="50%" height="80" >  
+     <image src="../../circuit1.png" width="50%" height="80" >  
      </image> 
   </view>
   <view class="table" hidden="{{index!= 1}}">
     <text class="table-title">电路图1</text>
-     <image src="https://github.com/Bluepepsis/image/blob/master/circuit2.png" width="50%" height="80" >  
+     <image src="../../circuit2.png" width="50%" height="80" >  
      </image> 
   </view>
 </view>
